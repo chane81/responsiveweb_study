@@ -18,7 +18,7 @@
     ```
 -   가변패딩과(padding: y% x%;), 가변마진(margin: y% x%;)의 기준
     -   width: 적용할 박스를 감싸고 있는 박스의 가로너비가 기준
-    -   height: 적용할 박스를 감싸고 있는 박스의 `가로너비`가 기준
+    -   height: 적용할 박스를 감싸고 있는 박스의 <span style="color:red;font-weight: bold;">가로너비</span>가 기준
     ```css
     margin: 10px 25%;
     padding: 5px 12%;
@@ -28,6 +28,8 @@
     -   가변폰트의 단위는 em, rem(root em), vw, vh, vmin, vmax
     -   em
         -   em 을 width 나 height 에 쓰는 이유는? - 일반적인 웹사이트를 개발할 때는 px 를 많이 쓰지만, 픽셀은 모니터의 해상도를 기준으로 하는데 브라우저의 폰트 사이즈를 사용자가 변경했다면 그에 따라 레이아웃도 가변적으로 바뀌어야한다. 해서 반응형웹에서는 가변폰트 단위인 em 또는 rem 를 써서 폰트크기에 적절한 레이아웃 구성을 한다.
+        -   참고 LINK :
+            `https://webdesign.tutsplus.com/ko/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984`
         -   폰트의 대문자 M 의 너비를 기준으로 하는 글자체 크기이다.
         -   1em 은 16px
         -   일반적으로 em 보다는 rem 을 쓴다.
