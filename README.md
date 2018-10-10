@@ -18,7 +18,7 @@
     ```
 -   가변패딩과(padding: y% x%;), 가변마진(margin: y% x%;)의 기준
     -   width: 적용할 박스를 감싸고 있는 박스의 가로너비가 기준
-    -   height: 적용할 박스를 감싸고 있는 박스의 <span style="color:red;font-weight: bold;">가로너비</span>가 기준
+    -   height: 적용할 박스를 감싸고 있는 박스의 <span style="color:red">가로너비</span>가 기준
     ```css
     margin: 10px 25%;
     padding: 5px 12%;
