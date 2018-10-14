@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        /* All Device */
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+            border: 4px solid #000;
+        }
+
+        #wrap div {
+            display: inline-block;
+            height: 100px;
+        }
+
+        #wrap div:nth-child(1) {
+            background: blue;
+        }
+
+        #wrap div:nth-child(2) {
+            background: yellow
+        }
+
+        #wrap div:nth-child(3) {
+            background: greenyellow
+        }
+
+        #wrap div:nth-child(4) {
+            background: hotpink
+        }
+
+        #wrap div:nth-child(5) {
+            background: blueviolet
+        }
+
+        @media all and (min-width: 320px) {
+            #wrap div {
+                width: 100%;
+            }
+        }
+
+        @media all and (min-width: 768px) {
+            #wrap div {
+                width: 50%;
+            }
+
+            #wrap div:last-child {
+                width: 100%;
+            }
+        }
+
+        @media all and (min-width: 1024px) {
+            #wrap div {
+                width: 20%;
+            }
+
+            #wrap div:last-child {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>테스트</div>
+        <div>111</div>
+        <div>222</div>
+        <div>333</div>
+        <div>444</div>
+    </div>
+</body>
+
+</html>
