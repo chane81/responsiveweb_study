@@ -37,8 +37,10 @@
     - 가변폰트의 단위를 width 나 height 에 쓴다. 글자크기에 따라서 해당요소의 크기가 알맞게 가변적으로 변하게 하기 위함.
   - vw(view port width)
     - 뷰포트 화면 width 의 100%를 기준으로 한다.(데스크탑의 경우 브라우저의 너비기준)
+    - 100vw == 100% width
   - vh(view port height)
     - 뷰포트 화면 height 의 100%를 기준으로 한다.(데스크탑의 경우 브라우저의 높이기준이며 텝높이 메뉴바도 포함이된다)
+    - 100vh == 100% height
   - vmin(viewport minimum)
     - 뷰포트 화면의 width 와 height 중 제일 작은 것이 기준이 된다.
   - vmax(viewport maximum)
