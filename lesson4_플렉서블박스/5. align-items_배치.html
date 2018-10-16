@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            width: 90vw;
+            height: 1200px;
+            margin: 0 auto;
+            border: 4px solid #000;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        /* 제목부분 (flex-start, flex-end...) */
+        #wrap>div:nth-child(3n + 1) {
+            width: 100vw;
+            font-weight: bold;
+            margin: 0.5em 1em;
+            font-size: 1.3rem;
+        }
+
+        /* div 색상 막대가 들어 있는 div*/
+        #wrap>div:nth-child(3n + 2) {
+            height: 10vh;
+            margin-bottom: 1.2em;
+        }
+
+        /* stretch */
+        #dvStretch {
+            display: flex;
+            align-items: stretch;
+        }
+
+        #dvStretch div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvStretch div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvStretch div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* stretch */
+
+        /* flex-start */
+        #dvFlexStart {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #dvFlexStart div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvFlexStart div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexStart div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-start */
+
+        /* flex-end */
+        #dvFlexEnd {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        #dvFlexEnd div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvFlexEnd div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexEnd div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-end */
+
+        /* center */
+        #dvCenter {
+            display: flex;
+            align-items: center;
+        }
+
+        #dvCenter div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvCenter div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvCenter div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* center */
+
+        /* baseline */
+        #dvBaseline {
+            display: flex;
+            align-items: baseline;
+        }
+
+        #dvBaseline div:nth-child(1) {
+            font-size: 0.5rem;
+            text-decoration: underline;
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+        }
+
+        #dvBaseline div:nth-child(2) {
+            font-size: 1.2rem;
+            text-decoration: underline;
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvBaseline div:nth-child(3) {
+            font-size: 1rem;
+            text-decoration: underline;
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* baseline */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>stretch</div>
+        <div id="dvStretch">
+            <div>Lorem Ipsum is simply dummy</div>
+            <div>survived not only five centuries, but als
+                unchanged. It was popularised in the 1960s</div>
+            <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+        <hr>
+
+        <div>flex-start</div>
+        <div id="dvFlexStart">
+            <div>Lorem Ipsum is simply dummy</div>
+            <div>survived not only five centuries, but als
+                unchanged. It was popularised in the 1960s</div>
+            <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+        <hr>
+
+        <div>flex-end</div>
+        <div id="dvFlexEnd">
+            <div>Lorem Ipsum is simply dummy</div>
+            <div>survived not only five centuries, but als
+                unchanged. It was popularised in the 1960s</div>
+            <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+        <hr>
+
+        <div>center</div>
+        <div id="dvCenter">
+            <div>Lorem Ipsum is simply dummy</div>
+            <div>survived not only five centuries, but als
+                unchanged. It was popularised in the 1960s</div>
+            <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+        <hr>
+
+        <div>baseline</div>
+        <div id="dvBaseline">
+            <div>Lorem Ipsum is simply dummy</div>
+            <div>survived not only five centuries, but als
+                unchanged. It was popularised in the 1960s</div>
+            <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        </div>
+    </div>
+</body>
+
+</html>

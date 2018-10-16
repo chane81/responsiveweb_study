@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            display: flex;
+
+            /* flex-direction + flex-wrap 효과 */
+            flex-flow: row wrap;
+
+            width: 90%;
+            height: 500px;
+            margin: 0 auto;
+            border: 4px solid #000;
+        }
+
+        /* #wrap div {
+            width: 100%
+        } */
+
+        #wrap div:first-child {
+            width: 90%;
+            height: 30%;
+            background: rgb(20, 230, 170, 0.5);
+            opacity: 0.5;
+        }
+
+        #wrap div:nth-child(2) {
+            width: 30%;
+            height: 40%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #wrap div:last-child {
+            width: 50%;
+            height: 60%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

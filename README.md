@@ -238,3 +238,66 @@
     > 1024px
   - 뷰포트 확인 사이트
     > http://dnsdk300.dothome.co.kr/viewport
+
+## LESSON4 - 플렉서블 박스
+
+- 아직 W3C 의 기술 명세 확정단계가 아니다.
+- 확정단계가 아니기때문에 브라우저 접두사(-webkit-)를 붙여야 안정적으로 제공이 가능하다.
+- 가능한 브라우저 버전
+
+  | 브라우저의 종류   | 브라우저 버전                         |
+  | ----------------- | ------------------------------------- |
+  | 익스플로러        | 11.0 ~                                |
+  | 크롬              | 29.0 ~                                |
+  | 사파리            | 7.0 (-webkit-)브라우저 접두사 필요    |
+  | 파이어폭스        | 28.0 ~                                |
+  | 오페라            | 20.0 ~                                |
+  | 안드로이드        | 4.4 ~                                 |
+  | iOS 사파리        | 7.0 (-webkit-)브라우저 접두사 필요    |
+  | 익스플로러 모바일 | 지원 안 함                            |
+  | 오페라 미니       | 지원 안 함                            |
+  | 블랙 베리         | 10.0 ~ (-webkit-)브라우저 접두사 필요 |
+
+- 기본 속성
+
+  - display: flex, inline-flex
+
+    - flex: 박스를 블록 수준으로 작동
+    - inline-flex: 박스를 인라인 수준으로 박동
+
+  - flex-direction: row(기본값), row-reverse, column, column-reverse
+
+    - row: 박스를 가로로 왼쪽에서 오른쪽으로 배치
+    - row-reverse: row 상태에서 배치를 reverse 함(오른쪽 -> 왼쪽 배치)
+    - column: 박스를 세로로 위에서 아래로 배치
+    - column-reverse: column 상태에서 배치를 reverse 함(아래쪽 -> 위쪽 배치)
+
+  - flex-wrap: nowrap(기본값), wrap, wrap-reverse
+
+    - nowrap: 한줄로 배치, 기본값
+    - wrap: 요소들끼리 감싸며 돌게 된다. nowrap 의 경우는 요소들의 width 가 100% 가 넘어가도 해당줄에서만 표현되지만, wrap 는 100% 가 넘어가면 요소들을 다음줄로 넘긴다.
+    - wrap-reverse: wrap 의 reverse 형태
+
+  - flex-flow: flex-direction 과 flex-wrp 속성을 같이 쓰기 위한 속성
+
+    - [flex-direction][flex-wrap]
+    - `row nowrap`
+
+  - justify-content: 주축 방향으로 다양하게 배치
+
+    - flex-start: 기본값, 자식박스를 부모박스 주축 시작점으로 배치
+    - flex-end: 자식박스를 부모박스의 끝점에서 배치
+    - center: 자식박스를 부모박스의 중앙으로 배치
+    - space-between: 첫번째와 마지막박스는 부모박스의 양쪽 끝으로 붙이고 나머지는 동일한 간격으로 배치
+    - space-around: 박스간 동일한 간격으로 배치(이런 탓에 실제로 보면 첫번째 박스와 마지막 박스가 공간이 작은것 처럼보인다.)
+    - space-evenly: 박스간 동일한 간격으로 배치(space-around 와 틀린점은 첫번째, 마지막 박스도 모두 공간이 동일한 간격이다.)
+
+    ![](/imgs/4_1.png)
+
+  - align-items: 교차축 방향으로 다양하게 배치
+
+    - stetch: 기본값
+    - flex-start: 교차축의 시작점에 배치
+    - flex-end: 교차축의 끝점에 배치
+    - center: 교차축의 주앙에 배치
+    - baseline: 교차축의 시작점에 배치되는 자식박스의 글자 베이스라인에 맞춰서 배치함

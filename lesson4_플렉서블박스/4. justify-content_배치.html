@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            width: 90vw;
+            height: 650px;
+            margin: 0 auto;
+            border: 4px solid #000;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        #wrap>div:nth-child(3n + 1) {
+            width: 100vw;
+            font-weight: bold;
+            margin: 0.5em 1em;
+            font-size: 1.3rem;
+        }
+
+        #wrap>div:nth-child(3n + 2) {
+            height: 5vh;
+            margin-bottom: 1.2em;
+        }
+
+        /* flex-start */
+        #dvFlexStart {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #dvFlexStart div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvFlexStart div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexStart div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-start */
+
+        /* flex-end */
+        #dvFlexEnd {
+            display: flex;
+            justify-content: flex-End;
+        }
+
+        #dvFlexEnd div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvFlexEnd div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexEnd div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-end */
+
+        /* center */
+        #dvCenter {
+            display: flex;
+            justify-content: center;
+        }
+
+        #dvCenter div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvCenter div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvCenter div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-center */
+
+        /* space-between */
+        #dvSpaceBetween {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #dvSpaceBetween div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvSpaceBetween div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceBetween div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-between */
+
+        /* space-around */
+        #dvSpaceAround {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #dvSpaceAround div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvSpaceAround div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceAround div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-around */
+
+        /* space-evenly */
+        #dvSpaceEvenly {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #dvSpaceEvenly div:nth-child(1) {
+            width: 20%;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvSpaceEvenly div:nth-child(2) {
+            width: 20%;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceEvenly div:nth-child(3) {
+            width: 20%;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-evenly */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>flex-start</div>
+        <div id="dvFlexStart">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr>
+
+        <div>flex-end</div>
+        <div id="dvFlexEnd">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr>
+
+        <div>center</div>
+        <div id="dvCenter">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr>
+
+        <div>space-between</div>
+        <div id="dvSpaceBetween">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr>
+
+        <div>space-around</div>
+        <div id="dvSpaceAround">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr>
+
+        <div>space-evenly</div>
+        <div id="dvSpaceEvenly">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>
