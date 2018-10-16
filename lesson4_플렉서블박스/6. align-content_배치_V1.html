@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            margin: 0 auto;
+            border: 4px solid #000;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        #wrap>div {
+            width: 17rem;
+            height: 25vh;
+            border: 1px solid hotpink;
+            margin: 0.3rem 0.3rem;
+        }
+
+        #wrap>div>div:nth-child(1) {
+            background-color: azure;
+            border-bottom: 1px solid gray;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* stretch */
+        #dvStretch {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: stretch;
+            height: 23vh;
+        }
+
+        #dvStretch div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvStretch div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvStretch div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* stretch */
+
+        /* flex-start */
+        #dvFlexStart {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            height: 23vh;
+        }
+
+        #dvFlexStart div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+        }
+
+        #dvFlexStart div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexStart div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-start */
+
+        /* flex-end */
+        #dvFlexEnd {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            height: 23vh;
+        }
+
+        #dvFlexEnd div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvFlexEnd div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvFlexEnd div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-end */
+
+        /* center */
+        #dvCenter {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            height: 23vh;
+        }
+
+        #dvCenter div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvCenter div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvCenter div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* flex-center */
+
+        /* space-between */
+        #dvSpaceBetween {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 23vh;
+        }
+
+        #dvSpaceBetween div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+        }
+
+        #dvSpaceBetween div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceBetween div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-between */
+
+        /* space-around */
+        #dvSpaceAround {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            height: 23vh;
+        }
+
+        #dvSpaceAround div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvSpaceAround div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceAround div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-around */
+
+        /* space-evenly */
+        #dvSpaceEvenly {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            height: 23vh;
+        }
+
+        #dvSpaceEvenly div:nth-child(1) {
+            width: 100vw;
+            background: rgb(20, 230, 170, 0.5);
+
+        }
+
+        #dvSpaceEvenly div:nth-child(2) {
+            width: 100vw;
+            background: rgb(90, 100, 170, 0.8);
+        }
+
+        #dvSpaceEvenly div:nth-child(3) {
+            width: 100vw;
+            background: rgb(233, 230, 170, 0.5);
+        }
+
+        /* space-evenly */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>
+            <div>stretch</div>
+            <div id="dvStretch">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>flex-start</div>
+            <div id="dvFlexStart">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>flex-end</div>
+            <div id="dvFlexEnd">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>center</div>
+            <div id="dvCenter">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>space-between</div>
+            <div id="dvSpaceBetween">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>space-around</div>
+            <div id="dvSpaceAround">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+
+        <div>
+            <div>space-evenly</div>
+            <div id="dvSpaceEvenly">
+                <div>Lorem Ipsum is simply dummy</div>
+                <div>survived not only five centuries, but als
+                    unchanged. It was popularised in the 1960s</div>
+                <div>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

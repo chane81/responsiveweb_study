@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        #wrap>div {
+            width: 17rem;
+            height: 25vh;
+            border: 1px solid hotpink;
+            margin: 0.3rem 0.3rem;
+        }
+
+        #wrap>div:nth-child(1) {
+            order: 3;
+            background-color: red;
+        }
+
+        #wrap>div:nth-child(2) {
+            order: 1;
+            background-color: blue;
+        }
+
+        #wrap>div:nth-child(3) {
+            order: 2;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>하나</div>
+        <div>둘</div>
+        <div>셋</div>
+    </div>
+</body>
+
+</html>

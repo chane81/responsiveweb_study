@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>html 기본</title>
+    <style>
+        /* div 사이의 엔터 공백 제거 */
+        #wrap {
+            font-size: 0px;
+            display: flex;
+            border: 1px solid hotpink;
+            height: 90vh;
+        }
+
+        #wrap * {
+            font-size: 16px;
+        }
+
+        #wrap>div {
+            width: 80rem;
+            height: 25vh;
+            border: 1px solid hotpink;
+            margin: 0.3rem 0.3rem;
+
+            /* flex-basis 값이 1일 경우 flex-grow 사용은 남는 여백에 대한 비율을 잘라서 각 플렉스 아이템에 붙이는 것이다 */
+            /* flex-basis 값이 0일 경우 flex-grow 사용은 각 아이템에 대한 비율을 적용시키는 것을 의미한다.(여백없이) */
+            /* flex-basis 값에 퍼센트(%)를 주었을 경우 플렉서블 박스의 크기를 100%로 잡았을 때 각 아이템에 주어지는 크기 비율이다. */
+            flex-basis: 0;
+        }
+
+        #wrap>div:nth-child(1) {
+            background-color: red;
+            /* flex-grow: 1; */
+            /* flex: 1; */
+            /* flex-shrink: 1; */
+        }
+
+        #wrap>div:nth-child(2) {
+            background-color: blue;
+            /* flex-grow: 2; */
+            /* flex: 2; */
+            /* flex-shrink: 2; */
+        }
+
+        #wrap>div:nth-child(3) {
+            background-color: yellow;
+            /* flex-grow: 1; */
+            /* flex: 1; */
+            /* flex-shrink: 1; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <div>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+        <div>cccccccccccccccccccccccccccccccccc</div>
+    </div>
+</body>
+
+</html>

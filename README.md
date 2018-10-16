@@ -292,12 +292,98 @@
     - space-around: 박스간 동일한 간격으로 배치(이런 탓에 실제로 보면 첫번째 박스와 마지막 박스가 공간이 작은것 처럼보인다.)
     - space-evenly: 박스간 동일한 간격으로 배치(space-around 와 틀린점은 첫번째, 마지막 박스도 모두 공간이 동일한 간격이다.)
 
-    ![](/imgs/4_1.png)
+    - 그림: [flex-flow: row nowrap] 또는 [flex-flow: row wrap] 기준
+      ![](/imgs/4_1.png)
 
   - align-items: 교차축 방향으로 다양하게 배치
 
-    - stetch: 기본값
+    - stretch: 기본값
     - flex-start: 교차축의 시작점에 배치
     - flex-end: 교차축의 끝점에 배치
     - center: 교차축의 주앙에 배치
     - baseline: 교차축의 시작점에 배치되는 자식박스의 글자 베이스라인에 맞춰서 배치함
+
+    - 그림: [flex-flow: row nowrap] 또는 [flex-flow: row wrap] 기준
+      ![](/imgs/4_2.png)
+
+  - align-self: 교차축 방향으로 개별 배치
+
+    - auto: 부모박스의 align-items 속성값을 상속
+    - stretch
+    - flex-start
+    - flex-end
+    - center
+    - baseline
+
+  - align-content: `여러줄인 경우의` 교차축 방향으로 다양하게 배치
+
+    - stretch
+    - flex-start
+    - flex-end
+    - center
+    - space-between
+    - space-around
+    - space-evenly
+
+    - 그림: [flex-flow: row wrap] and [div width: 100vw] 기준
+    - row 인데 수직으로 배치되는건 width 가 100%이고 wrap 속성때문에 아래로 내려갔기 때문
+      ![](/imgs/4_3.png)
+
+  - order: 0(기본값), 정숫값, 숫자 순서대로 엘리먼트가 강제 배치가 된다.
+
+  - 플렉스 아이템의 크기 비율 조절하기
+
+    - flex: [flex-grow][flex-shrink] [flex-basis]
+
+      - [단일숫자]
+      - 0 1 auto
+      - 0 auto(0 1 auto 와 같음)
+      - initial(0 1 auto 와 같음)
+      - auto(1 1 auto 와 같음)
+      - none(0 0 auto 와 같음)
+
+      - 단일 숫자 사용시 예제
+
+      ```css
+        <style>
+        #wrap {
+            display: flex;
+        }
+
+        #wrap > div {
+            width: 17rem;
+            height: 25vh;
+            border: 1px solid hotpink;
+            margin: 0.3rem 0.3rem;
+        }
+
+        #wrap > div:nth-child(1) {
+            flex: 1;
+        }
+
+        #wrap > div:nth-child(2) {
+            flex: 2;
+        }
+
+        #wrap > div:nth-child(3) {
+            flex: 1;
+        }
+      </style>
+      ```
+
+    - flex-grow: 플렉스 아이템 늘이기
+
+      - flex-basis 값이 1 일 경우 flex-grow 사용은 남는 여백에 대한 비율을 잘라서 각 플렉스 아이템에 붙이는 것이다.
+      - flex-basis 값이 0 일 경우 flex-grow 사용은 각 아이템에 대한 비율을 적용시키는 것을 의미한다.(여백없이)
+
+    - flex-shrink: 플렉스 아이템 줄이기
+
+      - 플렉스 아이템이 플렉서블 박스의 크기를 넘길경우 flex-shrink 에서 선언한 비율만큼 각 플렉스 아이템의 크기를 자른다.
+      - flex-basis 값 1 이 디폴트이다.
+      - flex-basis 값을 0 으로 할 경우 플렉스 아이템의 width 는 무시되고 순수 아이템 크기가 된다.
+
+    - flex-basis: 기본 크기 설정
+      - flex-basis 값이 1 일 경우 flex-grow 사용은 남는 여백에 대한 비율을 잘라서 각 플렉스 아이템에 붙이는 것이다.
+      - flex-basis 값이 0 일 경우 flex-grow 사용은 각 아이템에 대한 비율을 적용시키는 것을 의미한다.(여백없이)
+      - flex-basis 값에 퍼센트(%)를 주었을 경우 플렉서블 박스의 크기를 100%로 잡았을 때 각 아이템에 주어지는 크기 비율이다.
+      - 단, 플렉스 아이템을 줄일 때 아이템안에 엘리먼트나 텍스트가 있을 경우 해당 텍스트의 길이만큼만 줄어들고, 그 이상 줄어들지는 않는다.
